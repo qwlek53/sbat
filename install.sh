@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ $(id -u) != "0" ]; then
     echo "Please execute with sudo: sudo ./install.sh"
     exit
