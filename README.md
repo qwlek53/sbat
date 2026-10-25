@@ -3,7 +3,7 @@ Crappy battery monitoring tool!
 
 ## License
 
-This project is licensed under the **GNU General Public License Version 3 or later(GPL-3.0-or-later**. See the `COPYING` file for details
+This project is licensed under the **GNU General Public License Version 3 or later(GPL-3.0-or-later)**. See the `COPYING` file for details
 
 ## Installation
 

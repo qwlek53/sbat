@@ -27,6 +27,8 @@ int main() {
   
   long max = 0;
   long now = 0;
+  long health = 0;
+  long temphealth = 0;
   long tempmax = 0;
   long tempnow = 0;
   
@@ -83,15 +85,28 @@ int main() {
 	    fclose(f);
 	  }
 
+	  snprintf(buff, sizeof(buff), "%s%s/energy_full_design", filepath, entry->d_name);
+
+	  f = fopen(buff, "r");
+
+	  if (f != NULL) {
+	    if(fscanf(f, "%ld", &temphealth) == 1) {
+	      health += temphealth;
+	    }
+
+	    fclose(f);
+	  }
+
       }
   }
   if (batterycount == 0) printf("No batteries found");
   printf("Batteries: %d\n", batterycount);
   // printf("%d\n", now);
   // printf("%d\n", max);
-  int overall = (now * 100) / max;
+  long overall = (now * 100) / max;
+  long ovheal = (max * 100) / health;
   printf("Battery: %d%\n", overall);
-
+  printf("Battery health: %d%\n", ovheal);
   return 0;
     
 }
