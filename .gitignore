@@ -1,3 +1,9 @@
-*~
-\#*\#
-*.o
+# Ignore absolutely everything by default
+*
+
+# Allow only these specific files
+!sbat.c
+!README.md
+!COPYING
+!install.sh
+!.gitignore
